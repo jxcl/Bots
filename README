@@ -1,0 +1,17 @@
+Written and Maintained by: Alex Bliskovsky
+
+In this game there are three types of bots: black, red, and green. Red and
+green bots can capture other bots, but black bots cannot. Both the red and
+green bots attempt to capture all of the other bots on the field. The game
+is over when all bots are of one color.
+
+Red bots cannot move, but they can capture 5 other bots each. 
+
+Green bots can move, but they can only capture 3 other bots each.
+
+The brightness of the bot is how many captures the bot has left. The dimmer
+the bot the more captures it has made. The number of captures it has made is
+reset every time it itself is captured. 
+
+This python program is written in python 2.6 and uses Pygame 1.9.1 which is
+avaliable from http://pygame.org.
