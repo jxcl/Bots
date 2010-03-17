@@ -3,8 +3,6 @@ import pygame.gfxdraw
 import random
 import robot
 import botflags
-import map
-import rooms
 import constants
 
 
