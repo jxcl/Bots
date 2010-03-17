@@ -28,8 +28,8 @@ class robot():
         if pos[0] != -1:
             self.position = pos
         else:
-            self.position[0] = random.randint(0,1000)
-            self.position[1] = random.randint(0,1000)
+            self.position[0] = random.randint(0,constants.HEIGHT)
+            self.position[1] = random.randint(0,constants.WIDTH)
         
         self.heading = [0,0]
         self.state = flag.BLACK
