@@ -64,16 +64,17 @@ class robot():
             return False
     
     def adjust_hdg(self):
-        '''Trigonometrically align bot on its course.'''
+        '''Sets the appopriate heading of the bot.
         
-        #This function was written at 3 AM. It works (more or less). I have no idea how.
-        #Any attempt to figure it out will probably lead to insanity.
+        It doesn't use trigonometry to set the speed, so
+        speed is not constant. However, it works well enough.
+        '''
         
         delta_x = self.destination[0] - self.position[0]
         delta_y = self.destination[1] - self.position[1]
         
         div = (abs(delta_x) + abs(delta_y)) * 1.0
-        if div != 0 and div >= 1:
+        if div >= 1:
             self.heading[0] = (delta_x / div) * self.speed
             self.heading[1] = (delta_y / div) * self.speed
         elif div < 1:
