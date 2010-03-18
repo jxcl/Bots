@@ -10,7 +10,7 @@ from pygame.locals import *
 from pygame.color import THECOLORS
 
 pygame.init()
-flags = botflags.botflags()
+flag = botflags.botflags()
 
 screen= pygame.display.set_mode(constants.SIZE)
 pygame.display.set_caption("Bots")
@@ -27,8 +27,8 @@ def populate():
         bot = robot.robot()
         bot_list.append(bot)
     
-    bot_list[0].set_state(flags.GREEN)
-    bot_list[1].set_state(flags.RED)
+    bot_list[0].set_state(flag.GREEN)
+    bot_list[1].set_state(flag.RED)
 
 populate()
 

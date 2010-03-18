@@ -66,6 +66,9 @@ class robot():
     def adjust_hdg(self):
         '''Trigonometrically align bot on its course.'''
         
+        #This function was written at 3 AM. It works (more or less). I have no idea how.
+        #Any attempt to figure it out will probably lead to insanity.
+        
         delta_x = self.destination[0] - self.position[0]
         delta_y = self.destination[1] - self.position[1]
         
@@ -105,9 +108,9 @@ class robot():
             dist_x = abs(bot.position[0] - self.position[0])
             dist_y = abs(bot.position[1] - self.position[1])
             
-            distance_to_bot = math.sqrt(dist_x**2 + dist_y**2)
+            distance_to_bot = dist_x**2 + dist_y**2
             
-            if distance_to_bot < constants.CAPTURE_RADIUS:
+            if distance_to_bot < constants.CAPTURE_RADIUS_SQUARE:
                 if self.position != bot.position:
                     prox_list.append(bot)
         
